@@ -4,15 +4,16 @@ const fs = require("fs");
 // let input = fs.readFileSync("input.txt").toString().split(" ");
 let input = fs.readFileSync("/dev/stdin").toString().split(" ");
 
-const h = parseInt(input[0]);
-const m = parseInt(input[1]);
+const a = parseInt(input[0]);
 
-if (m >= 45) {
-  console.log(`${h} ${m - 45}`);
+if (a >= 90 && a <= 100) {
+  console.log("A");
+} else if (a >= 80) {
+  console.log("B");
+} else if (a >= 70) {
+  console.log("C");
+} else if (a >= 60) {
+  console.log("D");
 } else {
-  if (h < 1) {
-    console.log(`23 ${m - 45 + 60}`);
-  } else {
-    console.log(`${h - 1} ${m - 45 + 60}`);
-  }
+  console.log("F");
 }
