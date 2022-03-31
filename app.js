@@ -21,3 +21,4 @@ if (a == b && a == c) {
   res = maxNum * 100;
 }
 console.log(res);
+console.log(res);
