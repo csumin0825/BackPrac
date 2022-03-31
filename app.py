@@ -1,13 +1,11 @@
-a,b,c = map(int, input().split())
+n = input()
+a = int(n[0])
+b = int(n[1])
+res = a+b
+res_ = 0
+count = 0
 
-if(a==b==c):
-    res = 10000+ a*1000
-elif(a==b or a==c):
-    res = 1000+ a*100
-elif(b==c):
-    res = 1000+ b*100
-else:
-    maxNum = max(a,b,c)
-    res = maxNum*100
-
+while(res != res_):
+    res_ = b+res
+    count += 1
 print(res)
