@@ -7,4 +7,4 @@ let b = parseInt(input[1]);
 
 console.log(a / b);
 
-// /dev/stdin
+
