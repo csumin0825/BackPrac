@@ -1,7 +1,7 @@
 const fs = require("fs");
 let input = fs.readFileSync("input.txt").toString().split(" ");
 
-//.   
+
 const n = parseInt(input[0]);
 
 for (i = 1; i < n + 1; i++) {
