@@ -1,6 +1,6 @@
 const fs = require("fs");
 let input = fs.readFileSync("input.txt").toString().split(" ");
-//let input = fs.readFileSync("input.txt").toString().split(" ");
+//let input = fs.readFileSync("input.
 
 const n = parseInt(input[0]);
 
