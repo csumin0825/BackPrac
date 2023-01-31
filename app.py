@@ -1,11 +1,9 @@
-n = input()
-a = int(n[0])
-b = int(n[1])
-res = a+b
-res_ = 0
-count = 0
+def solution(n):
+    n_ =str(n)
+    answer = 0
+    print(n_[0])
+    print(n_[1])
+    print(n_[2])
+    return answer
 
-while(res != res_):
-    res_ = b+res
-    count += 1
-print(res)
+print(solution(123))
