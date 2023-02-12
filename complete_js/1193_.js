@@ -7,17 +7,33 @@ let input = fs.readFileSync("example.txt").toString().split("\n");
 
 const N = input[0];
 
-console.log(N);
-let cnt = 1;
-let a = 1;
+let cnt = 0;
+let increase = 0;
+while (cnt < N) {
+  increase += 1;
+  cnt += increase;
+}
+cnt = cnt - increase + 1;
 
-while (cnt != N) {
-  for (let i = 1; i <= a; i++) {
-    for (let j = 1; j <= a; j++) {
-      console.log(`${i}/${j}`);
-      cnt += 1;
+print(increase % 2 != 0 ? true : false);
+
+function print(odd) {
+  let a = 0,
+    b = 0;
+  if (odd) {
+    a = increase;
+    b = 1;
+    for (cnt; cnt < N; cnt++) {
+      a -= 1;
+      b += 1;
+    }
+  } else {
+    a = 1;
+    b = increase;
+    for (cnt; cnt < N; cnt++) {
+      a += 1;
+      b -= 1;
     }
   }
-  a += 1;
-  console.log(cnt);
+  console.log(`${a}/${b}`);
 }
