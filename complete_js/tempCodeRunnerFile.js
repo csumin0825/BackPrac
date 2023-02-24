@@ -1,6 +1,8 @@
-FileSync("example.txt").toString().split("\n");
 
-const [N, M] = input[0].split(" ").map(Number);
-
-console.log(N,M)
-let input_ = input.slice(1, N + 1);
+// input.sort((a, b) => {
+//   if (a[0] === b[0]) {
+//     return a[1] - b[1];
+//   } else {
+//     return a[0] - b[0];
+//   }
+// });
