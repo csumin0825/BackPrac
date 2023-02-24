@@ -14,10 +14,9 @@
 
 const input = require("fs").readFileSync("example.txt").toString().trim().split("\n");
 
-const [n, m] = input.shift().split(" ");
+const [yMax, xMax] = input.shift().split(" ");
 
 const map = input.map((v) => v.split("").map((x) => +x));
-
 const stack = [[0, 0, 1]];
 
 const dir = [
@@ -34,7 +33,7 @@ while (stack.length) {
     const xPos = x + dir[i][0];
     const yPos = y + dir[i][1];
 
-    if (0 <= xPos && yPos > -1 && xPos < m && yPos < n) {
+    if (0 <= xPos && yPos >= 0 && xPos < xMax && yPos < yMax) {
       if (map[yPos][xPos] === 1) {
         map[yPos][xPos] = dis + 1;
         stack.push([xPos, yPos, dis + 1]);
@@ -43,4 +42,4 @@ while (stack.length) {
   }
 }
 
-console.log(map[n - 1][m - 1]);
+console.log(map[yMax - 1][xMax - 1]);
