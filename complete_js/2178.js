@@ -41,5 +41,4 @@ while (stack.length) {
     }
   }
 }
-
 console.log(map[yMax - 1][xMax - 1]);
