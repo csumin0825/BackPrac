@@ -7,18 +7,18 @@ let input = fs.readFileSync("example.txt").toString().split("\n");
 
 let n = Number(input[0]);
 let count = 0;
-let arr = [];
+
 while (true) {
-  if (input % 5 === 0) {
-    console.log(input / 5 + count);
+  if (n % 5 === 0) {
+    console.log(n / 5 + count);
     break;
   }
 
-  if (0 > input) {
+  if (0 > n) {
     console.log(-1);
     break;
   }
 
   count++;
-  input -= 3;
+  n -= 3;
 }
