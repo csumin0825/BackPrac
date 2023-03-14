@@ -1,6 +1,5 @@
 //백준 제출용
 // const fs = require("fs");
-// let input = fs.readFileSync("/dev/stdin").toString().split("\n");
 
 const fs = require("fs");
 let input = fs.readFileSync("example.txt").toString().trim().split("\n");
